@@ -47,7 +47,7 @@ public class SoundManager : MonoBehaviour
 
     void VolumEfx(float value)
     {
-        BgmSource.volume = value;
+        efxSource.volume = value;
     }
 
 }

@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour
     
     //ui part
     public GameObject GamePause;
-    public GameObject GameRule;
     public GameObject GameEnd;
     //결과창
     public TextMeshProUGUI score_txt;
@@ -101,27 +100,5 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1;
             GameState = "Play";
         }
-    }
-    //버튼 메소드 설명 버튼
-    public void Rulebutton()
-    {
-
-        if (GameState == "Play")
-        {
-            GameRule.SetActive(true);
-            Time.timeScale = 0;
-            GameState = "Rule";
-        }
-        else if(GameState == "Pause")
-        {
-            Time.timeScale = 0;
-        }
-        else
-        {
-            GameRule.SetActive(false);
-            Time.timeScale = 1;
-            GameState = "Play";
-        }
-
     }
 }

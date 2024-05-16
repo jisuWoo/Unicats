@@ -51,13 +51,6 @@ public class PlayerControl : MonoBehaviour
             SoundManager.instance.PlaySingle(SoundManager.instance.fisheatSound);
             Destroy(other.gameObject);
         }
-        if (other.CompareTag("Trash"))
-        {
-            gm.score -= 50;
-            Timedecrese();
-            SoundManager.instance.PlaySingle(SoundManager.instance.wrongSound);
-            StartCoroutine(Hit());
-        }
         if (gm.score <= 0) gm.score = 0;
         if (PlayerHp <= 0) PlayerHp = 0;
     }
